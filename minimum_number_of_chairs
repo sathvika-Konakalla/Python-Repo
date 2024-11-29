@@ -1,0 +1,17 @@
+def case(n,s):
+     tot=(n+1)*100
+     req=tot//2
+     cur=sum(s)
+     mini=req-cur
+     if mini>100:
+         return -1
+     elif mini<=0:
+         return 0 
+     else:
+         return mini
+t=int(input())
+for i in range(t):
+    n=int(input())
+    s=list(map(int,input().split()))
+    res=case(n,s)
+    print(res)
