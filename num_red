@@ -1,0 +1,25 @@
+# cook your dish here
+T = int(input())
+
+for i in range(T):
+    X = int(input())
+
+    visited = set()
+    queue = [X]
+
+    while queue:
+        current = queue.pop(0)
+        
+        if current == 1:
+            print(1)
+            break
+        if current == 3:
+            print(3)
+            break
+        
+        if current not in visited:
+            visited.add(current)
+            if current > 3:
+                queue.append(current - 3)
+            if current % 2 == 0:
+                queue.append(current // 2)
